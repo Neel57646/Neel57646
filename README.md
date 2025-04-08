@@ -1,266 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essential Nutrients and Supplements</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 12px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Dynamic Arbitrage Stake Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      background: #fff;
+      padding: 20px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .form-group {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .form-group label {
+      margin-right: 10px;
+    }
+    input[type="number"] {
+      width: 100px;
+      padding: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .results p {
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Dynamic Arbitrage Stake Calculator</h1>
+    <form id="arbitrageForm">
+      <table id="outcomesTable">
+        <thead>
+          <tr>
+            <th>Outcome</th>
+            <th>Odds</th>
+            <th>Implied Probability</th>
+            <th>Stake</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Outcome 1 (Row 2) -->
+          <tr>
+            <td>Outcome 1</td>
+            <td>
+              <input type="number" step="0.01" value="3.00" required>
+            </td>
+            <td>
+              <span class="probability">0.0000</span>
+            </td>
+            <td>
+              <span class="stake">0.00</span>
+            </td>
+          </tr>
+          <!-- Outcome 2 (Row 3) -->
+          <tr>
+            <td>Outcome 2</td>
+            <td>
+              <input type="number" step="0.01" value="4.80" required>
+            </td>
+            <td>
+              <span class="probability">0.0000</span>
+            </td>
+            <td>
+              <span class="stake">0.00</span>
+            </td>
+          </tr>
+          <!-- Outcome 3 (Row 4) -->
+          <tr>
+            <td>Outcome 3</td>
+            <td>
+              <input type="number" step="0.01" value="4.60" required>
+            </td>
+            <td>
+              <span class="probability">0.0000</span>
+            </td>
+            <td>
+              <span class="stake">0.00</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-<header>
-    <h1>Neel Patel's Personal Website</h1>
-</header>
+      <div class="form-group">
+        <label for="totalFund">Total Fund:</label>
+        <input type="number" step="0.01" id="totalFund" value="100" required>
+      </div>
 
-<main>
-    <h1>Essential Vitamins, Minerals, and Supplements</h1>
-    <table>
-        <tr>
-            <th>Nutrient/Supplement</th>
-            <th>Benefits</th>
-            <th>Recommended Dosage</th>
-            <th>Sources</th>
-            <th>Deficiency Symptoms (where applicable)</th>
-        </tr>
-        <tr>
-            <td>Vitamin A</td>
-            <td>Vision, immune function, skin health</td>
-            <td>M: 900 mcg, F: 700 mcg</td>
-            <td>Carrots, sweet potatoes, spinach, liver</td>
-            <td>Night blindness, dry eyes, immune issues</td>
-        </tr>
-        <tr>
-            <td>Vitamin B1</td>
-            <td>Energy metabolism, nerve function</td>
-            <td>M: 1.2 mg, F: 1.1 mg</td>
-            <td>Whole grains, pork, legumes</td>
-            <td>Fatigue, irritability, poor memory</td>
-        </tr>
-        <tr>
-            <td>Vitamin B2</td>
-            <td>Energy production, cell function, growth</td>
-            <td>M: 1.3 mg, F: 1.1 mg</td>
-            <td>Dairy, eggs, lean meats, green vegetables</td>
-            <td>Cracked lips, sore throat, inflamed tongue</td>
-        </tr>
-        <tr>
-            <td>Vitamin B3</td>
-            <td>Energy metabolism, DNA repair, skin health</td>
-            <td>M: 16 mg, F: 14 mg</td>
-            <td>Poultry, fish, whole grains, peanuts</td>
-            <td>Pellagra (dermatitis, diarrhea, dementia)</td>
-        </tr>
-        <tr>
-            <td>Vitamin B5</td>
-            <td>Synthesis of coenzyme A, energy production</td>
-            <td>M/F: 5 mg</td>
-            <td>Meat, fish, whole grains, avocados</td>
-            <td>Fatigue, irritability, numbness</td>
-        </tr>
-        <tr>
-            <td>Vitamin B6</td>
-            <td>Protein metabolism, red blood cell production</td>
-            <td>M/F: 1.3-1.7 mg</td>
-            <td>Poultry, fish, potatoes, bananas</td>
-            <td>Anemia, dermatitis, depression</td>
-        </tr>
-        <tr>
-            <td>Vitamin B7</td>
-            <td>Metabolism of fatty acids, amino acids, and glucose</td>
-            <td>M/F: 30 mcg</td>
-            <td>Eggs, nuts, seeds, fish, sweet potatoes</td>
-            <td>Hair loss, skin rashes, brittle nails</td>
-        </tr>
-        <tr>
-            <td>Vitamin B9</td>
-            <td>DNA synthesis, cell division</td>
-            <td>M/F: 400 mcg</td>
-            <td>Leafy greens, legumes, fortified grains</td>
-            <td>Anemia, fatigue, mouth sores</td>
-        </tr>
-        <tr>
-            <td>Vitamin B12</td>
-            <td>Red blood cell formation, neurological function</td>
-            <td>M/F: 2.4 mcg</td>
-            <td>Meat, fish, dairy, fortified cereals</td>
-            <td>Anemia, fatigue, nerve damage</td>
-        </tr>
-        <tr>
-            <td>Vitamin C</td>
-            <td>Antioxidant, collagen synthesis, immune function</td>
-            <td>M: 90 mg, F: 75 mg</td>
-            <td>Citrus fruits, strawberries, bell peppers</td>
-            <td>Scurvy (bleeding gums, bruising, fatigue)</td>
-        </tr>
-        <tr>
-            <td>Vitamin D</td>
-            <td>Calcium absorption, bone health, immune function</td>
-            <td>M/F: 15 mcg (600 IU)</td>
-            <td>Sunlight, fatty fish, fortified dairy</td>
-            <td>Bone pain, muscle weakness, fatigue</td>
-        </tr>
-        <tr>
-            <td>Vitamin E</td>
-            <td>Antioxidant, immune function, skin health</td>
-            <td>M/F: 15 mg</td>
-            <td>Nuts, seeds, spinach, broccoli</td>
-            <td>Muscle weakness, vision problems, immune issues</td>
-        </tr>
-        <tr>
-            <td>Vitamin K</td>
-            <td>Blood clotting, bone health</td>
-            <td>M: 120 mcg, F: 90 mcg</td>
-            <td>Leafy greens, fish, meat, dairy</td>
-            <td>Easy bruising, excessive bleeding</td>
-        </tr>
-        <tr>
-            <td>Calcium</td>
-            <td>Bone health, muscle function, nerve transmission</td>
-            <td>M/F: 1000-1200 mg</td>
-            <td>Dairy, leafy greens, fortified foods</td>
-            <td>Osteoporosis, muscle cramps</td>
-        </tr>
-        <tr>
-            <td>Iron</td>
-            <td>Oxygen transport, energy production</td>
-            <td>M: 8 mg, F: 18 mg</td>
-            <td>Red meat, beans, fortified cereals</td>
-            <td>Anemia, fatigue, pale skin</td>
-        </tr>
-        <tr>
-            <td>Magnesium</td>
-            <td>Muscle and nerve function, energy production, bone health</td>
-            <td>M: 400-420 mg, F: 310-320 mg</td>
-            <td>Nuts, seeds, whole grains, leafy greens</td>
-            <td>Muscle cramps, mental disorders, fatigue</td>
-        </tr>
-        <tr>
-            <td>Potassium</td>
-            <td>Fluid balance, muscle contractions, nerve signals</td>
-            <td>M/F: 4700 mg</td>
-            <td>Bananas, potatoes, oranges, spinach</td>
-            <td>Weakness, fatigue, muscle cramps</td>
-        </tr>
-        <tr>
-            <td>Zinc</td>
-            <td>Immune function, wound healing, DNA synthesis</td>
-            <td>M: 11 mg, F: 8 mg</td>
-            <td>Meat, shellfish, legumes, seeds</td>
-            <td>Growth retardation, hair loss, delayed healing</td>
-        </tr>
-        <tr>
-            <td>Iodine</td>
-            <td>Thyroid hormone production, metabolic regulation</td>
-            <td>M/F: 150 mcg</td>
-            <td>Iodized salt, seafood, dairy</td>
-            <td>Goiter, hypothyroidism, weight gain</td>
-        </tr>
-        <tr>
-            <td>Selenium</td>
-            <td>Antioxidant, thyroid function, immune response</td>
-            <td>M/F: 55 mcg</td>
-            <td>Brazil nuts, seafood, meat</td>
-            <td>Muscle weakness, immune deficiencies</td>
-        </tr>
-        <tr>
-            <td>Copper</td>
-            <td>Red blood cell production, iron metabolism, connective tissue</td>
-            <td>M/F: 900 mcg</td>
-            <td>Shellfish, nuts, seeds, whole grains</td>
-            <td>Anemia, bone abnormalities</td>
-        </tr>
-        <tr>
-            <td>Manganese</td>
-            <td>Bone formation, metabolism, antioxidant enzymes</td>
-            <td>M: 2.3 mg, F: 1.8 mg</td>
-            <td>Nuts, legumes, whole grains, leafy greens</td>
-            <td>Weak bones, poor growth, reproductive issues</td>
-        </tr>
-        <tr>
-            <td>Chromium</td>
-            <td>Insulin function, macronutrient metabolism</td>
-            <td>M: 35 mcg, F: 25 mcg</td>
-            <td>Broccoli, grapes, whole grains, meats</td>
-            <td>Blood sugar issues, weight loss, neuropathy</td>
-        </tr>
-        <tr>
-            <td>Omega-3 Fatty Acids</td>
-            <td>Heart health, brain function, inflammation reduction</td>
-            <td>M/F: 250-500 mg EPA+DHA</td>
-            <td>Fatty fish, flaxseeds, walnuts</td>
-            <td>Not applicable</td>
-        </tr>
-        <tr>
-            <td>Probiotics</td>
-            <td>Gut health, immune function, digestion</td>
-            <td>M/F: Varies by strain</td>
-            <td>Yogurt, kefir, fermented foods</td>
-            <td>Not applicable</td>
-        </tr>
-        <tr>
-            <td>Creatine</td>
-            <td>Muscle mass, strength, exercise performance</td>
-            <td>M/F: 3-5 grams</td>
-            <td>Red meat, fish, supplements</td>
-            <td>Not applicable</td>
-        </tr>
-        <tr>
-            <td>Protein</td>
-            <td>Muscle repair, growth, immune function</td>
-            <td>M/F: 0.8 grams/kg body weight</td>
-            <td>Meat, dairy, beans, supplements</td>
-            <td>Not applicable</td>
-        </tr>
-    </table>
-</main>
+      <div class="form-group">
+        <button type="button" onclick="calculateArbitrage()">Calculate</button>
+      </div>
+    </form>
 
-<footer>
-    <p>&copy; 2024 Neel Patel. All rights reserved.</p>
-</footer>
+    <div class="results">
+      <h2>Results</h2>
+      <p id="targetReturn"></p>
+      <p id="totalStake"></p>
+      <p id="profit"></p>
+    </div>
+  </div>
 
+  <script>
+    function calculateArbitrage() {
+      // Get total fund value
+      var totalFund = parseFloat(document.getElementById('totalFund').value);
+      if (isNaN(totalFund) || totalFund <= 0) {
+        alert('Please enter a valid total fund.');
+        return;
+      }
+      
+      // Get all outcome rows
+      var rows = document.querySelectorAll('#outcomesTable tbody tr');
+      var outcomes = [];
+      var sumProb = 0;
+      
+      // Loop through each row, calculating implied probability per outcome
+      rows.forEach(function(row, index) {
+        var oddsInput = row.querySelector('input[type="number"]');
+        var odds = parseFloat(oddsInput.value);
+        if (isNaN(odds) || odds <= 0) {
+          alert('Please enter valid odds for ' + row.cells[0].textContent + '.');
+          return;
+        }
+        var probability = 1 / odds;
+        sumProb += probability;
+        outcomes.push({
+          row: row,
+          odds: odds,
+          probability: probability
+        });
+      });
+
+      // Calculate Target Return: R = Total Fund / Sum of Implied Probabilities (S)
+      var targetReturn = totalFund / sumProb;
+
+      // Calculate each outcome's stake and update the display
+      outcomes.forEach(function(item) {
+        var stake = targetReturn / item.odds;
+        item.row.querySelector('.probability').textContent = item.probability.toFixed(4);
+        item.row.querySelector('.stake').textContent = stake.toFixed(2);
+      });
+
+      // Display overall results
+      document.getElementById('targetReturn').textContent = 'Target Return (R): ' + targetReturn.toFixed(2);
+      var totalStakes = outcomes.reduce(function(sum, item) {
+        return sum + (targetReturn / item.odds);
+      }, 0);
+      document.getElementById('totalStake').textContent = 'Total Stakes: ' + totalStakes.toFixed(2);
+      var profit = targetReturn - totalFund;
+      document.getElementById('profit').textContent = 'Guaranteed Profit: ' + profit.toFixed(2);
+    }
+  </script>
 </body>
 </html>
